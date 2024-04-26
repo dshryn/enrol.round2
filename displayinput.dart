@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 void main() {
   runApp(MyApp());
 }
-
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -13,12 +12,10 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
 class UserInputScreen extends StatefulWidget {
   @override
   _UserInputScreenState createState() => _UserInputScreenState();
 }
-
 class _UserInputScreenState extends State<UserInputScreen> {
   TextEditingController _textEditingController = TextEditingController();
   String _inputText = '';
@@ -28,7 +25,6 @@ class _UserInputScreenState extends State<UserInputScreen> {
     _textEditingController.dispose();
     super.dispose();
   }
-
   void _updateInputText() {
     setState(() {
       _inputText = _textEditingController.text;

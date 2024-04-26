@@ -3,12 +3,10 @@ import 'package:flutter/material.dart';
 void main() {
   runApp(MyApp());
 }
-
 class MyApp extends StatefulWidget {
   @override
   _MyAppState createState() => _MyAppState();
 }
-
 class _MyAppState extends State<MyApp> {
   final TextEditingController control1 = TextEditingController();
   final TextEditingController control2 = TextEditingController();
@@ -21,7 +19,6 @@ class _MyAppState extends State<MyApp> {
           : (double.parse(control1.text) + double.parse(control2.text)).toString();
     });
   }
-
   void multiply() {
     setState(() {
       result= (control1.text.isEmpty || control2.text.isEmpty)
@@ -29,7 +26,6 @@ class _MyAppState extends State<MyApp> {
           : (double.parse(control1.text) * double.parse(control2.text)).toString();
     });
   }
-
   void subtract() {
     setState(() {
       result= (control1.text.isEmpty || control2.text.isEmpty)
@@ -37,7 +33,6 @@ class _MyAppState extends State<MyApp> {
           : (double.parse(control1.text) - double.parse(control2.text)).toString();
     });
   }
-
   void divide() {
     setState(() {
       if (control2.text.isEmpty || control2.text == '0') {
